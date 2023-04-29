@@ -29,4 +29,4 @@ def list_countries(request):
 
 
 if __name__ == "__main__":
-    app.run('0.0.0.0', 8000, access_log=False, workers=5)
+    app.run('0.0.0.0', 8000, access_log=False, workers=10)
