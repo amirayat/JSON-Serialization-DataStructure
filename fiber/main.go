@@ -9,7 +9,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/joho/godotenv"
-	"gopkg.in/guregu/null.v4"
 )
 
 // Country struct
@@ -21,14 +20,14 @@ type Country struct {
 	Iso2            string      `json:"iso2"`
 	Numeric_code    string      `json:"numeric_code"`
 	Phone_code      string      `json:"phone_code"`
-	Capital         null.String `json:"capital"`
+	Capital         string      `json:"capital"`
 	Currency        string      `json:"currency"`
 	Currency_name   string      `json:"currency_name"`
 	Currency_symbol string      `json:"currency_symbol"`
 	Tld             string      `json:"tld"`
-	Native          null.String `json:"native"`
-	Region          null.String `json:"region"`
-	Subregion       null.String `json:"subregion"`
+	Native          string      `json:"native"`
+	Region          string      `json:"region"`
+	Subregion       string      `json:"subregion"`
 	Timezones       string      `json:"timezones"`
 	Translations    string      `json:"translations"`
 	Latitude        string      `json:"latitude"`

@@ -14,7 +14,7 @@ public partial class Country
 
     public string PhoneCode { get; set; } = null!;
 
-    public string? Capital { get; set; }
+    public string Capital { get; set; } = null!;
 
     public string Currency { get; set; } = null!;
 
@@ -24,11 +24,11 @@ public partial class Country
 
     public string Tld { get; set; } = null!;
 
-    public string? Native { get; set; }
+    public string Native { get; set; } = null!;
 
-    public string? Region { get; set; }
+    public string Region { get; set; } = null!;
 
-    public string? Subregion { get; set; }
+    public string Subregion { get; set; } = null!;
 
     public string Timezones { get; set; } = null!;
 
