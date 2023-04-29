@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv'
 import express from 'express'
 import pkg from 'pg';
+import cluster from 'cluster'
 const { Pool } = pkg;
 
 dotenv.config()
@@ -16,15 +17,25 @@ const pool = new Pool({
   connectionTimeoutMillis: 2000,
 })
 
-const app = express()
+if (cluster.isPrimary) {
+  // Fork workers.
+  for (let i = 0; i < 8; i++) {
+    cluster.fork();
+  }
 
-app.get('/countries/', (request, response) => {
-  pool.query('SELECT * FROM countries', (error, results) => {
-    if (error) {
-      throw error
-    }
-    response.status(200).json(results.rows)
+  cluster.on('exit', (worker, code, signal) =>
+    console.log('worker ' + worker.pid + ' died'));
+} else {
+  const app = express();
+  
+  app.get('/countries/', (request, response) => {
+    pool.query('SELECT * FROM countries', (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+    })
   })
-})
-
-app.listen(8000)
+  
+  app.listen(8000)
+}
