@@ -12,45 +12,36 @@ import (
 	"gopkg.in/guregu/null.v4"
 )
 
-type Timezones struct {
-	ZoneName      string `json:"zoneName"`
-	GmtOffset     int    `json:"gmtOffset"`
-	GmtOffsetName string `json:"gmtOffsetName"`
-	Abbreviation  string `json:"abbreviation"`
-	TzName        string `json:"tzName"`
-}
-
-type Translations map[string]interface{}
-
 // Country struct
 
 type Country struct {
-	ID              int          `json:"id"`
-	Name            string       `json:"name"`
-	Iso3            string       `json:"iso3"`
-	Iso2            string       `json:"iso2"`
-	Numeric_code    string       `json:"numeric_code"`
-	Phone_code      string       `json:"phone_code"`
-	Capital         null.String  `json:"capital"`
-	Currency        string       `json:"currency"`
-	Currency_name   string       `json:"currency_name"`
-	Currency_symbol string       `json:"currency_symbol"`
-	Tld             string       `json:"tld"`
-	Native          null.String  `json:"native"`
-	Region          null.String  `json:"region"`
-	Subregion       null.String  `json:"subregion"`
-	Timezones       []Timezones  `json:"timezones"`
-	Translations    Translations `json:"translations"`
-	Latitude        string       `json:"latitude"`
-	Longitude       string       `json:"longitude"`
-	Emoji           string       `json:"emoji"`
-	EmojiU          string       `json:"emojiU"`
+	ID              int         `json:"id"`
+	Name            string      `json:"name"`
+	Iso3            string      `json:"iso3"`
+	Iso2            string      `json:"iso2"`
+	Numeric_code    string      `json:"numeric_code"`
+	Phone_code      string      `json:"phone_code"`
+	Capital         null.String `json:"capital"`
+	Currency        string      `json:"currency"`
+	Currency_name   string      `json:"currency_name"`
+	Currency_symbol string      `json:"currency_symbol"`
+	Tld             string      `json:"tld"`
+	Native          null.String `json:"native"`
+	Region          null.String `json:"region"`
+	Subregion       null.String `json:"subregion"`
+	Timezones       string      `json:"timezones"`
+	Translations    string      `json:"translations"`
+	Latitude        string      `json:"latitude"`
+	Longitude       string      `json:"longitude"`
+	Emoji           string      `json:"emoji"`
+	EmojiU          string      `json:"emojiU"`
 }
 
 // Countries struct
 type Countries struct {
 	Countries []Country `json:"countries"`
 }
+
 
 func main() {
 	// Connect with database

@@ -72,15 +72,11 @@ public partial class BenchmarkContext : DbContext
             entity.Property(e => e.Subregion)
                 .HasMaxLength(25)
                 .HasColumnName("subregion");
-            entity.Property(e => e.Timezones)
-                .HasColumnType("jsonb")
-                .HasColumnName("timezones");
+            entity.Property(e => e.Timezones).HasColumnName("timezones");
             entity.Property(e => e.Tld)
                 .HasMaxLength(3)
                 .HasColumnName("tld");
-            entity.Property(e => e.Translations)
-                .HasColumnType("jsonb")
-                .HasColumnName("translations");
+            entity.Property(e => e.Translations).HasColumnName("translations");
         });
 
         OnModelCreatingPartial(modelBuilder);

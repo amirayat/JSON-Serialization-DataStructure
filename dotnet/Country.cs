@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace dotnet;
+﻿namespace dotnet;
 
 public partial class Country
 {
@@ -32,9 +30,9 @@ public partial class Country
 
     public string? Subregion { get; set; }
 
-    public JsonDocument Timezones { get; set; } = null!;
+    public string Timezones { get; set; } = null!;
 
-    public JsonDocument Translations { get; set; } = null!;
+    public string Translations { get; set; } = null!;
 
     public string Latitude { get; set; } = null!;
 

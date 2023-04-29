@@ -21,33 +21,33 @@ Server Hostname:        127.0.0.1
 Server Port:            8000
 
 Document Path:          /countries/
-Document Length:        223950 bytes
+Document Length:        235242 bytes
 
 Concurrency Level:      100
-Time taken for tests:   23.468 seconds
+Time taken for tests:   13.276 seconds
 Complete requests:      20000
 Failed requests:        0
-Total transferred:      4481780000 bytes
-HTML transferred:       4479000000 bytes
-Requests per second:    852.21 [#/sec] (mean)
-Time per request:       117.342 [ms] (mean)
-Time per request:       1.173 [ms] (mean, across all concurrent requests)
-Transfer rate:          186494.75 [Kbytes/sec] received
+Total transferred:      4707620000 bytes
+HTML transferred:       4704840000 bytes
+Requests per second:    1506.53 [#/sec] (mean)
+Time per request:       66.378 [ms] (mean)
+Time per request:       0.664 [ms] (mean, across all concurrent requests)
+Transfer rate:          346298.12 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       9
-Processing:    17  117  50.2    107    1473
-Waiting:        9  100  49.5     90    1452
-Total:         17  117  50.2    107    1474
+Connect:        0    0   0.2      0       7
+Processing:    10   66  36.6     62    1106
+Waiting:        6   55  35.8     51    1098
+Total:         10   66  36.6     62    1107
 
 Percentage of the requests served within a certain time (ms)
-  50%    107
-  66%    121
-  75%    139
-  80%    147
-  90%    163
-  95%    176
-  98%    210
-  99%    255
- 100%   1474 (longest request)
+  50%     62
+  66%     67
+  75%     71
+  80%     74
+  90%     83
+  95%     93
+  98%    129
+  99%    188
+ 100%   1107 (longest request)
